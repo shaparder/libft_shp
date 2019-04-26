@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strchr_shp.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: osfally <osfally@student.42.fr>            +#+  +:+       +#+        */
+/*   By: viduvern <viduvern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/07 22:53:29 by osfally           #+#    #+#             */
-/*   Updated: 2019/04/07 22:53:29 by osfally          ###   ########.fr       */
+/*   Created: 2019/04/07 22:59:19 by osfally           #+#    #+#             */
+/*   Updated: 2019/04/23 14:19:24 by viduvern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
 /*
-** The functions strchr() return a pointer to the located character
-** or NULL if the character does not appear in the string.
+** The functions strchr() return the located character
+** or '\0' if the character does not appear in the string.
 */
 
-char	*ft_strchr(const char *str, int ch)
+char	ft_strchr_shp(const char *str, int ch)
 {
 	int			i;
 
@@ -25,11 +25,11 @@ char	*ft_strchr(const char *str, int ch)
 	while (str[i])
 	{
 		if (str[i] == (char)ch)
-			return ((char *)(str + i));
+			return (str[i]);
 		i++;
 	}
 	if ((char)ch == '\0')
-		return ((char *)(str + i));
+		return (str[i]);
 	else
-		return (NULL);
+		return ('\0');
 }

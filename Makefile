@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: osfally <osfally@student.42.fr>            +#+  +:+       +#+         #
+#    By: viduvern <viduvern@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/10 10:35:14 by osfally           #+#    #+#              #
-#    Updated: 2019/02/10 17:53:01 by osfally          ###   ########.fr        #
+#    Updated: 2019/04/23 16:42:05 by viduvern         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,6 @@ SRC_DIRS 	= $(RAW_DIRS:./src/%=%)
 SRC			= $(RAW_SRC:./src/%=%)
 OBJ			= $(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
 
-
 # compilateur / flags
 CC			:=	gcc
 CFLAGS		:=	-Wall -Wextra -Werror
@@ -32,6 +31,7 @@ CFLAGS		:=	-Wall -Wextra -Werror
 .PHONY: all clean fclean re
 
 all: $(OBJ_DIR) $(NAME)
+	@echo "Libft file created."
 
 $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
@@ -48,10 +48,10 @@ $(NAME): $(OBJ)
 
 clean:
 	@rm -rf $(OBJ_DIR)
-	@echo "Objects cleaned."
+	@echo "Libft objects cleaned."
 
 fclean:	clean
 	@rm -rf $(NAME)
-	@echo "Executable cleaned."
+	@echo "Libft file cleaned."
 
 re: fclean all

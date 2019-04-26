@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strjoin_freeboth.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: osfally <osfally@student.42.fr>            +#+  +:+       +#+        */
+/*   By: viduvern <viduvern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/01 15:54:10 by osfally           #+#    #+#             */
-/*   Updated: 2019/02/21 23:02:45 by osfally          ###   ########.fr       */
+/*   Created: 2019/04/12 16:29:53 by osfally           #+#    #+#             */
+/*   Updated: 2019/04/23 14:18:22 by viduvern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int		ft_bzero(void *s, size_t len)
+char	*ft_strjoin_freeboth(char *s1, char *s2)
 {
-	ft_memset(s, 0, len);
-	return (1);
+	char	*s;
+
+	s = ft_strjoin(s1, s2);
+	free(s1);
+	free(s2);
+	return (s);
 }
