@@ -6,7 +6,7 @@
 /*   By: osfally <osfally@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 17:05:34 by osfally           #+#    #+#             */
-/*   Updated: 2019/02/21 23:13:25 by osfally          ###   ########.fr       */
+/*   Updated: 2019/04/30 14:22:00 by osfally          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include "get_next_line.h"
 
 # define ISWP(x) x == ' ' || x == '\t' || x == '\n'
 # define MACH(addr, ret) if (!(addr)) return (ret)
-# define BUFF_SIZE 32
-# define MAX_FD 256
 
 int					ft_isalpha(int c);
 int					ft_isalnum(int c);
@@ -71,6 +70,7 @@ char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char x);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+void				ft_error(char *str);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putstr_fd(char const *str, int fd);
