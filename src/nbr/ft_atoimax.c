@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoimax.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: viduvern <viduvern@student.42.fr>          +#+  +:+       +#+        */
+/*   By: osfally <osfally@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/10 16:36:16 by osfally           #+#    #+#             */
-/*   Updated: 2019/04/23 14:38:34 by viduvern         ###   ########.fr       */
+/*   Updated: 2019/04/30 17:14:23 by osfally          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int		ft_atoimax(char *str)
+intmax_t		ft_atoimax(char *str)
 {
-	int					sign;
+	short				sign;
 	intmax_t			nb;
 
 	nb = 0;

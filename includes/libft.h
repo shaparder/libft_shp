@@ -6,7 +6,7 @@
 /*   By: osfally <osfally@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 17:05:34 by osfally           #+#    #+#             */
-/*   Updated: 2019/04/30 14:22:00 by osfally          ###   ########.fr       */
+/*   Updated: 2019/04/30 23:55:01 by osfally          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int					ft_isdigit(int c);
 int					ft_islower(int c);
 int					ft_isprint(int c);
 int					ft_isupper(int c);
+int					ft_strisnbr(char *str);
 void				*ft_memalloc(size_t size);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t len);
 void				*ft_memchr(const void *s, int c, size_t len);
@@ -71,6 +72,7 @@ char				**ft_strsplit(char const *s, char x);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 void				ft_error(char *str);
+void				ft_success(char *str);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putstr_fd(char const *str, int fd);
@@ -85,7 +87,7 @@ char				*ft_imaxtoa_base(intmax_t num, uintmax_t base, int flag);
 char				*ft_uimaxtoa_base(uintmax_t num, uintmax_t base, int flag);
 void				ft_swap(int *a, int *b);
 int					ft_atoi(char *str);
-int					ft_atoimax(char *str);
+intmax_t			ft_atoimax(char *str);
 int					ft_atoi_base(const char *str, int str_base);
 int					ft_atoimax_base(const char *str, int str_base);
 int					findmin(int *array, int array_size);
